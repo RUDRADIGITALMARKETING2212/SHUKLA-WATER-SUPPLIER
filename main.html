@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Shukla Water Supplier</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+/* BASE STYLES */
+body {
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#f4f8fb;
+  color:#222;
+}
+
+header {
+  background:#0077cc;
+  color:white;
+  padding:20px;
+  text-align:center;
+}
+
+/* BANNER */
+.banner {
+  width:100%;
+  height:60vh; /* height responsive */
+  min-height:400px;
+  background: url("SHUKLA WATER SUPPLIER.jpeg") center/cover no-repeat;
+  position:relative;
+}
+
+.banner::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.45);
+}
+
+.banner-content {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  color:white;
+  text-align:center;
+  z-index:2;
+  padding:0 15px;
+}
+
+.banner-content h1 {
+  font-size:3em;
+  margin-bottom:10px;
+}
+
+.banner-content p {
+  font-size:1.2em;
+  margin-bottom:20px;
+}
+
+.banner-content a {
+  display:inline-block;
+  padding:12px 28px;
+  background:#00c6ff;
+  color:#003f73;
+  text-decoration:none;
+  border-radius:30px;
+  font-weight:bold;
+  transition:.3s;
+}
+.banner-content a:hover {background:#fff;}
+
+/* SERVICES */
+section {
+  padding:40px 20px;
+  text-align:center;
+}
+
+.services {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:20px;
+}
+
+.service {
+  background:white;
+  padding:15px;
+  border-radius:10px;
+  width:260px;
+  box-shadow:0 4px 12px rgba(0,0,0,.12);
+  transition:.3s;
+}
+.service:hover {transform:translateY(-6px);}
+.service img {
+  width:100%;
+  height:160px;
+  object-fit:cover;
+  border-radius:8px;
+}
+
+/* ORDER FORM */
+.container {
+  max-width:500px;
+  margin:50px auto;
+  background:white;
+  padding:25px;
+  border-radius:10px;
+  box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+h2 {text-align:center;color:#0077cc;}
+form {display:flex;flex-direction:column;}
+label {margin-top:10px;font-weight:bold;}
+input, select, textarea {
+  padding:10px;
+  margin-top:5px;
+  border-radius:6px;
+  border:1px solid #ccc;
+}
+button {
+  margin-top:20px;
+  padding:12px;
+  background:#00c6ff;
+  color:#003f73;
+  font-weight:bold;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  transition:.3s;
+}
+button:hover {background:#0077cc;color:white;}
+
+/* FOOTER */
+footer {
+  background:#003f73;
+  color:white;
+  text-align:center;
+  padding:15px;
+}
+
+/* TEAM SECTIONS */
+.team-section {
+  max-width:700px;
+  margin:50px auto;
+  background:white;
+  padding:25px;
+  border-radius:10px;
+  box-shadow:0 5px 15px rgba(0,0,0,.1);
+  display:flex;
+  align-items:center;
+  gap:20px;
+  flex-wrap:wrap; /* mobile friendly */
+}
+.team-section img {
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  object-fit:cover;
+  box-shadow:0 4px 12px rgba(0,0,0,.15);
+}
+.team-section div {
+  flex:1;
+  min-width:200px;
+}
+
+/* MEDIA QUERIES FOR MOBILE */
+@media(max-width:768px){
+  .banner-content h1 {font-size:2em;}
+  .banner-content p {font-size:1em;}
+  .service {width:90%; max-width:300px;}
+  .container {margin:30px 15px;}
+  .team-section {flex-direction:column; text-align:center;}
+  .team-section img {width:120px;height:120px;}
+  .team-section div {min-width:auto;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Shukla Water Supplier</h1>
+</header>
+
+<!-- TOP PHOTO -->
+<div class="banner">
+  <div class="banner-content">
+    <h1>Shukla Water Supplier</h1>
+    <p>Pure Drinking Water & Tanker Supply</p>
+    <a href="#services">View Services</a>
+  </div>
+</div>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="service">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTA6XnQd-smz1m3cp0rM7PeeUBvuMmi90NMEg&s" alt="20L Jar">
+      <h3>20L Water Jar</h3>
+      <p>Home and office jar supply</p>
+    </div>
+    <div class="service">
+      <img src="https://5.imimg.com/data5/SELLER/Default/2022/3/UJ/NM/ND/24580957/double-layer-plastic-storage-water-tank.png" alt="Tanker">
+      <h3>Water Tanker</h3>
+      <p>Tanker for events and construction</p>
+    </div>
+    <div class="service">
+      <img src="https://5.imimg.com/data5/GLADMIN/Default/2022/7/JU/XU/AC/92368/drinking-water-supply-services-500x500.jpg" alt="Drinking Water">
+      <h3>Drinking Water</h3>
+      <p>Safe RO & mineral water</p>
+    </div>
+  </div>
+</section>
+
+<!-- ORDER FORM -->
+<div class="container">
+  <h2>Shukla Water Order Form</h2>
+  <form id="waterForm">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" placeholder="Your name" required>
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" placeholder="+91" required>
+
+    <label for="address">Delivery Address</label>
+    <textarea id="address" placeholder="Your address" rows="3" required></textarea>
+
+    <label for="quantity">Water Type & Quantity</label>
+    <select id="quantity" required>
+      <option value="">Select</option>
+      <option value="1 Jar 20L">1 Jar 20L</option>
+      <option value="2 Jar 20L">2 Jar 20L</option>
+      <option value="Tanker 500L">Tanker 500L</option>
+      <option value="Tanker 1000L">Tanker 1000L</option>
+    </select>
+
+    <label for="note">Additional Notes</label>
+    <textarea id="note" placeholder="Any special instructions" rows="2"></textarea>
+
+    <button type="submit">Send Order via WhatsApp</button>
+  </form>
+</div>
+
+<!-- TEAM SECTION -->
+<div class="team-section">
+  <img src="WhatsApp Image 2026-01-07 at 7.53.13 PM.jpeg" alt="Director Photo">
+  <div>
+    <h3 style="color:#0077cc;margin-bottom:8px;">Mr. Ashish Shukla</h3>
+    <p style="color:#555;">Founder & Director of Shukla Water Supplier. With years of experience in providing safe and pure drinking water, Mr. Ashish Shukla ensures timely delivery and highest quality standards for every home and business.</p>
+  </div>
+</div>
+
+<div class="team-section" style="max-width:600px;">
+  <img src="Screenshot 2025-12-27 205541.png" alt="Digital Marketing Head">
+  <div>
+    <h3 style="color:#0077cc;margin:0;">Felicity Rudraxgarg</h3>
+    <p style="color:#555;font-weight:bold;margin:5px 0;">Digital Marketing Head</p>
+    <p style="color:#777;margin:0;">Responsible for leading digital campaigns, social media strategy, and online brand growth for our company.</p>
+  </div>
+</div>
+
+<footer>
+  <p>Contact: +91 6386863221 | UTTAR PRADESH</p>
+  <p>© 2026 Shukla Water Supplier</p>
+</footer>
+
+<script>
+document.getElementById('waterForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    let name = document.getElementById('name').value;
+    let phone = document.getElementById('phone').value;
+    let address = document.getElementById('address').value;
+    let quantity = document.getElementById('quantity').value;
+    let note = document.getElementById('note').value;
+
+    let message = `New Water Order:%0AName: ${name}%0APhone: ${phone}%0AAddress: ${address}%0AOrder: ${quantity}%0ANote: ${note}`;
+    
+    let whatsappNumber = "916386863221"; 
+    let url = `https://wa.me/${whatsappNumber}?text=${message}`;
+    window.open(url, "_blank");
+});
+</script>
+
+</body>
+</html>
